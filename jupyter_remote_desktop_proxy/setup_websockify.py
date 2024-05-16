@@ -66,8 +66,9 @@ def setup_websockify():
         ]
         + websockify_args
         + ['--', '/bin/sh', '-c', f'cd {os.getcwd()} && {vnc_command}'],
-        'timeout': 30,
+        'timeout': 90,
         'new_browser_window': False,
+        'new_browser_tab': False,
         # We want the launcher entry to point to /desktop/, not to /desktop-websockify/
         # /desktop/ is the user facing URL, while /desktop-websockify/ now *only* serves
         # websockets.
