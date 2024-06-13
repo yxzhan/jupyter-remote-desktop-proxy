@@ -22,6 +22,9 @@ function disconnectedFromServer(e) {
     status("Disconnected");
   } else {
     status("Something went wrong, connection is closed");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000)
   }
 }
 
